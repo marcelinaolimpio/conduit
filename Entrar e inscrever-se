@@ -2,6 +2,14 @@
 
 Feature:Login para autenticação.
 
+Canário:Acesso ao Feed global sem login.
+     Dado o usuário está navegando no "popular tags" na tela do "feed global"
+     E seleciona a opção "implementations"
+     Quando ele aciona o botão "create a new implementation"
+     Então é exibida a tela "create a new implementation"
+     E o fluxo é Encerrado.
+
+
 Cenário:Acessar "sign in"
      Dado o usuário está da tela do "feed"
      Quando aciona o botão "sing in"
