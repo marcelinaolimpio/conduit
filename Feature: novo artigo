@@ -1,0 +1,8 @@
+#language: pt
+
+Funcionalidade: New Article
+
+Cenário: New Article
+     Dado o usuário está da tela do "your feed"
+     Quando aciona o botão "New Article"
+     Então é exibida a tela "New Article"
