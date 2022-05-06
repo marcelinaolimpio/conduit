@@ -11,7 +11,7 @@ Canário:Acesso ao Feed global sem login.
 
 
 Cenário:Acessar "sign in"
-     Dado o usuário está da tela do "feed"
+     Dado o usuário está da tela do "feed global"
      Quando aciona o botão "sing in"
      Então a tela para Logar é exibida.
 
@@ -48,7 +48,7 @@ Exemplos:
            
 
 Cenário:Acessar "sign up"
-     Dado o usuário está da tela do "feed"
+     Dado o usuário está da tela do "feed global"
      Quando aciona o botão "sing up"
      Então a tela para cadastro é exibida.
 
