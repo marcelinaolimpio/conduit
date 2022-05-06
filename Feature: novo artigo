@@ -1,8 +1,37 @@
 #language: pt
 
-Funcionalidade: New Article
+Funcionalidade: Your Feed
+
+Cenário:Your Feed
+      Dado o usuário está na tela do "Your Feed"
+      Quando ele clica no botão "create a new implementation"
+      Então é exibida a tela "create a new implementation"
+
+Cenário:Comentar em create a new implementation.
+       
 
 Cenário: New Article
      Dado o usuário está da tela do "your feed"
      Quando aciona o botão "New Article"
      Então é exibida a tela "New Article"
+
+Cenário:Criar New Article 
+      Dado o usuário está na tela "New Article"
+      Quando preenche os seguintes campos
+         |Article title|What's this Article about?|write your Article(in markdown)|enter tags|
+         |teste        |testando                  |criando um teste no novo artigo|implementação|
+      E ele clica no botão "Publish Article"
+      Então é Publicado o "New Article"
+
+Esquema do Cenário:New Article com Campos não Preenchidos.
+      Dado o usuário está na tela de "New Article"
+      Quando não preenche os seguintes campos
+           |<Article title>|<What's this Article about?>|<write you Article(in markdown)>|<enter tags>|
+      E ele clica no botão "Publish Article"
+      Então o sistema retorna a "<mensagem>"
+Exemplos:
+             |exemplos  |Article title|What's this Article about?|write you Article(in markdown) |enter tags   |mensagem|
+             |exemplo 01|             |testando                  |criando um teste em New Article|Implementação|title can't be blank| 
+             |exemplo 02|teste        |                          |criando um teste em New Article|implementação|description can't be blank|
+
+
