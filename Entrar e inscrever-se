@@ -24,7 +24,7 @@ Cenário:Login válido
       E clica no botão "sign in"
       Então o login é feito com sucesso.
 
-Cenário:Esquema de cenário com valores inválidos  
+Esquema do cenário:Valores inválidos  
        Dado o usuário está na tela "sign in"
        Quando preenche os seguintes campos com valores inválidos 
            |<email>|<password>|
@@ -35,7 +35,7 @@ Exemplos:
            |exemplo   |Mil@hormail.com|*****   |email or password os invalid|
 
 
-Cenário:Esquema de cenário com valores não preenchidos
+Esquema do cenário:valores não preenchidos
        Dado o usuário está na tela "sign in"
        Quando não preenche os seguintes campos
           |<email>|<password>|
@@ -62,7 +62,7 @@ Cenário:cadastro válido
      Então o cadastro é concluído 
 
 
-Cenário:Esquema de cenário com valores inválido 
+Esquema do cenário:valores inválido 
       Dado o usuário está na tela "sing up"
       E preenche os seguintes campos com valores inválidos 
             |<username>|<email>|<password>|
@@ -74,7 +74,7 @@ Exemplos:
             |exemplo 02|t       |mil@hormail.com   |******* |username has already been taken|
 
 
-Cenário:Esquema de cenário com valores não preenchidos.
+Esquema do cenário:valores não preenchidos.
       Dado o usuário está na tela de "sing up"
       E não preenche os seguintes campos com valores
           |<username>|<email>|<password>|
