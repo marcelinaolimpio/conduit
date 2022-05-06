@@ -11,7 +11,7 @@ Canário:Acesso ao global feed sem login.
 
 
 Cenário:Acessar "sign in"
-     Dado o usuário está da tela do "feed global"
+     Dado o usuário está da tela do "global feed"
      Quando aciona o botão "sing in"
      Então a tela para Logar é exibida.
 
