@@ -7,7 +7,14 @@ Cenário:Your Feed
       Quando ele clica no botão "create a new implementation"
       Então é exibida a tela "create a new implementation"
 
-Cenário:Comentar em create a new implementation.
+Cenário:create a new implementation.
+      Dado o usuário está na tela "create a new comment"
+      Quando ele preenche o seguinte campo
+           |write a comment|
+           |testando       |
+      E o usuário clica no botão "post comment"
+      Então é publicado o comentário.
+
        
 
 Cenário: New Article
