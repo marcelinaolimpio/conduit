@@ -1,0 +1,88 @@
+#language: pt
+
+Funcionalidade:Novo artigo 
+
+Cenário: Novo artigo 
+     Dado o usuário está na tela do "your feed"
+     Quando clica no botão "New Article"
+     Então é exibida a tela "New Article"
+
+
+Cenário:Criar um Novo artigo 
+      Dado o usuário está na tela "New Article"
+      Quando preenche os seguintes campos
+         |Article title|What's this Article about?|write your Article(in markdown)|enter tags|
+         |teste        |testando                  |criando um teste no novo artigo|implementação|
+      E ele clica no botão "Publish Article"
+      Então é publicado um novo artigo.
+
+
+Esquema do Cenário:Novo artigo com Campos não Preenchidos.
+      Dado o usuário está na tela de "New Article"
+      Quando não preenche os seguintes campos
+           |<Article title>|<What's this Article about?>|<write you Article(in markdown)>|<enter tags>|
+      E ele clica no botão "Publish Article"
+      Então o sistema retorna a "<mensagem>"
+Exemplos:
+             |exemplos  |Article title|What's this Article about?|write you Article(in markdown) |enter tags   |mensagem                  |
+             |exemplo 01|             |testando                  |criando um teste em New Article|Implementação|title can't be blank      | 
+             |exemplo 02|teste        |                          |criando um teste em New Article|implementação|Title can't be blank      |
+             |exemplo 03|Teste        |testando                  |                               |implementação|title can't be blank      |
+             |exemplo 04|Teste        |testando                  |criando um teste em New Article|             |title can't be blank      |
+             |exemplo 05|             |                          |                               |             |title can't be blank      |
+             |exemplo 06|Teste        |                          |                               |             |description can't be blank|
+             |exemplo 07|             |testando                  |                               |             |title can't be blank      |
+             |exemplo 08|             |                          |criando um teste em New Article|             |title can't be blank      |
+             |exemplo 09|             |                          |                               |implementação|title can't be blank      |
+
+
+Cenário:Excluir novo artigo criado
+       Dado o usuário está na tela "feed global"
+       Quando ele clica no botão "delete article"
+       Então o Artigo é excluído 
+
+
+Cenário:Acessar Novo artigo criado
+      Dado o usuário está na tela do "Feed global"
+      Quando ele seleciona a opção de artigos "create a new implementation"
+      E o usuário clica no botão "create a New implementation"
+      Então é exibida a tela "create a new implementation"
+
+
+Cenário:comentar em publicação do artigo "create a new implementation".
+      Dado o usuário está na tela do "create a new implementation"
+      Quando ele preenche o seguinte campo
+           |write a comment|
+           |testando       |
+      E o usuário clica no botão "post comment"
+      Então é publicado o comentário.
+
+
+Cenário:Excluir comentário no artigo "create a new implementation"
+       Dado o usuário está na tela "create a new implementation"
+       Quando ele deseja apagar "post comment"
+       E clica no botão "lixeira"
+       Então o comentário é excluído
+
+
+Cenário:Seguir o usuário que criou um novo artigo
+      Dado o usuário está na tela do "create a new comment"
+      E ele seleciona a opção "follow"
+      Quando o usuário clica no botão "follow"
+      Então a ação de seguir o usuário é concluída.
+
+
+Cenário:favoritar o artigo " create a new implementation"
+       Dado o usuário está na tela "create a new implementation"
+       E seleciona a opção "favorite article"
+       Quando clica no botão "favorite article"
+       Então o artigo é incluído para os favoritos.
+
+
+Cenário:Excluir o artigo dos favoritos
+      Dado usuário está tela do artigo "explore implementação"
+      E seleciona a opção "unfavorite article"
+      Quando clica no botão "unfavorite article"
+      Então o artigo é excluído do favoritos.
+
+       
